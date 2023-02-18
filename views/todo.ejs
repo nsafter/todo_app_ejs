@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TODOList</title>
+    <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+	<div class="box">
+		<h1 id="heading">MyTODOList</h1>
+		</div>
+        <div class="box">
+    <% items.forEach(ele => { %>
+        <div class="item"><form action="/" method="post">
+            <div>
+            <button name="del" value=<%=ele.id%> >-</button>
+            <button name="update" value=<%=ele.id%> >✏️</button>
+            </div>
+        </form>
+        <p><%=ele.item%></p>
+        </div>
+   <% }) %>
+</div>
+    <form action="/" method="post">
+        <input type="text" name="work" placeholder="Enter item">
+        <button name="btn" type="submit" value="addwork">+</button>
+    </form>
+</div>
+</body>
+</html>
